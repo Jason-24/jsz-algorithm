@@ -22,7 +22,9 @@ public class Insertion {
         for (int i = 1; i < arr.length; i++) {
             for (int j = i; j >= 0; j--) {
                 if (greater(arr[j], arr[j - 1])) {
-                    exchange(arr, j-1, j);
+                    exchange(arr, j, j-1);
+                } else {
+                    break;
                 }
             }
         }
